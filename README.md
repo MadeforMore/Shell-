@@ -3,7 +3,7 @@
 - name(any word) =  variable ( ex -  name = aryan )
 - for taking the input = read (ex - read name :-  means the the input the name ) 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# AutoBackup.sh
+# Cronjob.sh
 
 ## Description
 `AutoBackup.sh` is a simple Bash script that logs the date and time every time it runs. You can schedule it using **cron** to automatically run at regular intervals, creating a basic automated logging system.
