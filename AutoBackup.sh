@@ -9,10 +9,11 @@ vim backup.sh  #open the file editer VIM (VIM is the File Editer in which we can
 
 #*the Shell Script*
 #!/bin/bash   
-SOURCE:" /home/yourusername/Docunents"  #the folder/file Loction from where you have to Take the Backup
-BACKUP:" /home/username/backup"   #the Folder/file you are tahing the Backup
+SOURCE="/home/yourusername/Documents"  #the folder/file Loction from where you have to Take the Backup
+BACKUP="/home/username/backup"  #the Folder/file you are tahing the Backup
+ 
 
 mkdir -p "$BACKUP"   #creting the Dirctory if not persent 
 
-cp -r "$SOURCE" /* "$BACKUP" #it is Copying the Files form Souerce ---> BACKUP folder (menes taking the backup )
+cp -r "$SOURCE"/* "$BACKUP"  #it is Copying the Files form Souerce ---> BACKUP folder (menes taking the backup )
 
