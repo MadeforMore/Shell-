@@ -19,12 +19,50 @@
 - Basic knowledge of terminal commands
 - Permission to edit cron jobs (`crontab -e`)
 
-## Installation & Setup
-
-1. **Create the script file**
-```bash
-touch AutoBackup.sh
-vim AutoBackup.sh
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#AutoBackup.sh 
+#!/bin/bash
+# ============================================================
+# 📂 Folder Backup Script
+#
+# This script allows you to take a backup of a folder
+# from your system into a specified backup directory.
+#
+# ------------------------------------------------------------
+# ⚙️ Steps to Use
+# 1. Create a working folder
+#    mkdir test && cd test
+#
+# 2. Create this script file
+#    touch backup.sh
+#
+# 3. Open in editor (vim, nano, etc.) and paste this script
+#
+# 4. Make it executable
+#    chmod +x backup.sh
+#
+# 5. Run the script
+#    ./backup.sh
+#
+# ------------------------------------------------------------
+# 📌 Notes
+# - Replace /home/yourusername/Documents with your source folder.
+# - Replace /home/username/backup with your backup folder.
+# - Backup directory will be created if not present.
+# - Each run overwrites existing files with the latest copy.
+# ============================================================
+
+# Source folder (the folder you want to backup)
+SOURCE="/home/yourusername/Documents"
+
+# Backup folder (where the backup will be stored)
+BACKUP="/home/username/backup"
+
+# Create backup directory if not present
+mkdir -p "$BACKUP"
+
+# Copy files from source to backup folder
+cp -r "$SOURCE"/* "$BACKUP"
+
+echo "✅ Backup completed successfully from $SOURCE to $BACKUP"
